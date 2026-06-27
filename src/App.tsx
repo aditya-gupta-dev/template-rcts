@@ -1,10 +1,10 @@
-import { Button } from "./components/ui/button";
+import { ThemeProvider } from "@/components/providers/theme-provider";
+import { Outlet } from "react-router-dom";
 
 export default function App() {
   return (
-    <>
-      <Button>Click Me</Button>
-      
-    </>
-  )
+    <ThemeProvider defaultTheme="system">
+      <Outlet />
+    </ThemeProvider>
+  );
 }
